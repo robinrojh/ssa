@@ -7,11 +7,11 @@ class Agent extends StatefulWidget {
     required this.name
   }) : super(key: key);
 
-  String dateOfEntry;
+  DateTime dateOfEntry;
   String name;
 
   int calculateDaysSinceEntry() {
-    return -1;
+    return DateTime.now().difference(dateOfEntry).inDays;
   }
   
   @override
@@ -24,8 +24,7 @@ class Agent extends StatefulWidget {
 class _AgentState extends State<Agent> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Text("Agent Temporary");
   }
 
 }
